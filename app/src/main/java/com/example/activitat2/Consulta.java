@@ -5,15 +5,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class Consulta extends AppCompatActivity implements View.OnClickListener{
+
+    DBInterface bd;
+    EditText editId;
+    Button btnConsulta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consulta);
+
+        editId = findViewById(R.id.editTextIdConsulta);
+        btnConsulta = (Button) findViewById(R.id.buttonConsultaConsulta);
+
     }
+
 
     @Override
     public void onClick(View v) {
