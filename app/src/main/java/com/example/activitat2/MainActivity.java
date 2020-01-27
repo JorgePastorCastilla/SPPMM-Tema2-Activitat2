@@ -8,7 +8,49 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
+    Button afegirBtn, consultaBtn, llistaBtn, actualitzaBtn, esborraBtn;
+    DBInterface db;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        db = new DBInterface(this);
+
+        afegirBtn = (Button) findViewById(R.id.afegirBtn);
+        afegirBtn.setOnClickListener(this);
+        consultaBtn = (Button) findViewById(R.id.consultaBtn);
+        consultaBtn.setOnClickListener(this);
+        llistaBtn = (Button) findViewById(R.id.llistaBtn);
+        llistaBtn.setOnClickListener(this);
+        actualitzaBtn = (Button) findViewById(R.id.actualitzaBtn);
+        actualitzaBtn.setOnClickListener(this);
+        esborraBtn = (Button) findViewById(R.id.esborraBtn);
+        esborraBtn.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v == afegirBtn){
+            startActivity(new Intent(v.getContext(),Afegir.class));
+        }else if(v == consultaBtn){
+            startActivity(new Intent(v.getContext(),Consulta.class));
+        }else if(v == llistaBtn){
+            startActivity(new Intent(v.getContext(),Llista.class));
+        }else if(v == actualitzaBtn){
+            startActivity(new Intent(v.getContext(),Actualitza.class));
+        }else if(v == esborraBtn){
+            startActivity(new Intent(v.getContext(),Esborra.class));
+        }
+    }
+}
+
+
+/*public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,4 +115,4 @@ public class MainActivity extends AppCompatActivity {
     public void esborra(){
 
     }
-}
+}*/
