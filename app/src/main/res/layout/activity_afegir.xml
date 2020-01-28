@@ -6,4 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".Afegir">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewNomAfegir"
+        android:text="Nom: "
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textViewEmailAfegir"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextNomAfegir"
+        app:layout_constraintLeft_toRightOf="@+id/textViewNomAfegir"
+        app:layout_constraintTop_toTopOf="@+id/textViewNomAfegir"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewNomAfegir"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewEmailAfegir"
+        android:text="Email: "
+        app:layout_constraintTop_toBottomOf="@+id/textViewNomAfegir"
+        app:layout_constraintLeft_toLeftOf="@+id/textViewNomAfegir"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextEmailAfegir"
+        app:layout_constraintLeft_toRightOf="@+id/textViewEmailAfegir"
+        app:layout_constraintTop_toTopOf="@+id/textViewEmailAfegir"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewEmailAfegir"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonAfegirAfegir"
+        android:text="Afegir"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewEmailAfegir"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
