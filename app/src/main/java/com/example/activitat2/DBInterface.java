@@ -18,9 +18,7 @@ public class DBInterface {
     public static final String BD_NOM = "BDAlumnes";
     public static final String BD_TAULA = "contactes";
     public static final int VERSIO = 1;
-    public static final String BD_CREATE ="create table " + BD_TAULA + "( "
-            + CLAU_ID + " integer primary key autoincrement, " +
-            CLAU_NOM +"text not null, " + CLAU_EMAIL + " text not null);";
+    public static final String BD_CREATE ="create table " + BD_TAULA + "( " + CLAU_ID + " integer primary key autoincrement, " + CLAU_NOM +" text not null, " + CLAU_EMAIL + " text not null);";
     private final Context context;
     private AjudaDB ajuda;
     private SQLiteDatabase bd;

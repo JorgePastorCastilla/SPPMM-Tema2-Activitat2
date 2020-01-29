@@ -23,6 +23,7 @@ public class Afegir extends AppCompatActivity implements View.OnClickListener{
         editNom = findViewById(R.id.editTextNomAfegir);
         editEmail = findViewById(R.id.editTextEmailAfegir);
         btnAfegir = (Button) findViewById(R.id.buttonAfegirAfegir);
+        btnAfegir.setOnClickListener(this);
     }
 
     @Override
@@ -30,8 +31,7 @@ public class Afegir extends AppCompatActivity implements View.OnClickListener{
         if (v == btnAfegir) {
             bd = new DBInterface(this);
             bd.obre();
-            if (bd.insereixContacte(editNom.getText().toString(),
-                    editEmail.getText().toString()) != -1) {
+            if (bd.insereixContacte(editNom.getText().toString(), editEmail.getText().toString()) != -1) {
                 Toast.makeText(this, "Afegit correctament",
                         Toast.LENGTH_SHORT).show();
             } else {
